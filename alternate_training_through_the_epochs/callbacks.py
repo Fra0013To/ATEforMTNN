@@ -1,3 +1,8 @@
+"""
+This module is dedicated to 'extended' versions of the keras callbacks, in order to make them suitable for an
+Alternate Training through the Epochs (ATE) procedure.
+"""
+
 import tensorflow as tf
 import numpy as np
 from tensorflow.python.platform import tf_logging as logging

@@ -3,6 +3,11 @@ import tensorflow as tf
 import alternate_training_through_the_epochs.callbacks as ate_callbacks
 
 class AlternateTrainingEpochsModel(tf.keras.models.Model):
+    """
+    Alternate Training through the Epochs (ATE) model class (obtained as subclass of tf.keras.models.Model).
+    It implements a NN model able to be trained with the ATE procedure described in https://arxiv.org/abs/2312.16340
+    by Bellavia S., Della Santa F., Papini A..
+    """
     def __init__(self, prefix_layername_shared='trunk', *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._prefix_layername_shared = prefix_layername_shared
@@ -32,6 +37,16 @@ class AlternateTrainingEpochsModel(tf.keras.models.Model):
                 use_multiprocessing=False,
                 replace_nonextended_original_callbacks=True
                 ):
+        """
+        ATE procedure for the model.
+        The method trains alternatively: i) the weights of the layers with name starting with the string stored in the
+        attribute _prefix_layername_shared; ii) the weights of all the other layers.
+        All the input arguments are the same of the fit method, except for the ones listed below.
+        :param epochs_shared: number of consecutive epochs dedicated to the shared parameters (integer)
+        :param epochs_taskspecific: number of consecutive epochs dedicated to the task-specific parameters (integer)
+        :param verbose_alternate: argument for printing information about which kind of parameters are training (bool)
+        :return history: dictionary containing the training history.
+        """
 
         training_configs = {
             'x': x,
