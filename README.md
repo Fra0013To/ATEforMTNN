@@ -85,7 +85,7 @@ To see a code example of ATE-SG procedure, see the script
 [example_alternate_training_epochs.py](https://github.com/Fra0013To/ATEforMTNN/blob/main/example_alternate_training_epochs.py)
 in this repository.
 
-To run the examples (bash terminal):
+To run the example (bash terminal):
 1. Clone the repository:
     ```bash 
     git clone https://github.com/Fra0013To/ATEforMTNN.git
@@ -93,6 +93,7 @@ To run the examples (bash terminal):
 2. Install the [required python modules](https://github.com/Fra0013To/ATEforMTNN/blob/main/README.md#requirements).
     ```bash
     pip install numpy
+    pip install matplotlib
     pip install tensorflow==2.X.X
     ```
    
