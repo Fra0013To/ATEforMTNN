@@ -94,10 +94,10 @@ To run the example (bash terminal):
     ```bash
     pip install numpy
     pip install matplotlib
-    pip install tensorflow==2.X.X
+    pip install tensorflow==2.X.Y
     ```
    
-    where _tensorflow==2.X.X_ denotes a generic version of tensorflow 2.
+    where _tensorflow==2.X.Y_ denotes a generic version of tensorflow 2.
     
 3. Run the script [example_alternate_training_epochs.py](https://github.com/Fra0013To/ATEforMTNN/blob/main/example_alternate_training_epochs.py)
 for the ATE-SG procedure example:
