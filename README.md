@@ -50,7 +50,7 @@ running the "_.ate_fit_" method.
 
 ### Model Creation
 
-An ATEModel object is created exactly as any other hard-parameter sharing MTNN in keras, but the _ATEModel_ clas must 
+An ATEModel object is created exactly as any other hard-parameter sharing MTNN in keras, but the _ATEModel_ class must 
 be used and the trunk's layer names must be characterized by the same prefix. 
 
 All the model's layers having a name that 
