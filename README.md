@@ -67,7 +67,7 @@ There are no differences in compiling ATEModel objects.
 **ATTENTION (SGD OPTIMIZER):** for running an ATE-SG procedure, the ATEModel object _must be compiled using the keras SGD Optimizer_. 
 Using other optimizers the ATE procedure still works (using the chosen optimizer), 
 but convergence properties are not guaranteed. 
-The convergence theoretical results of the paper are guaranteed only for the ATE-SG procedure (for now).
+The theoretical results about convergence in the paper are guaranteed only for the ATE-SG procedure (for now).
 
 
 ### Training the Model with ATE Procedure
