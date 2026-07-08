@@ -6,8 +6,8 @@ by [Stefania Bellavia](https://www.researchgate.net/profile/Stefania-Bellavia),
 
 In this repository, we publish the code used to implement the _Alternate Training through the Epochs_ 
 (**ATE**) procedure for training _Multi-Task Neural Networks_ (**MTNN**) presented in 
-_Alternate Training of Shared and Task-Specific Parameters for Multi-Task Neural Networks_, 
-arXiv preprint, 2023, https://doi.org/10.48550/arXiv.2312.16340.
+_ATE-SG: alternate through the epochs stochastic gradient for multi-task neural networks_, 
+Optimization Methods and Software, 2026, https://doi.org/10.1080/10556788.2026.2659033 [Open Access].
 
 In the article we introduce novel alternate training procedures for hard-parameter sharing MTNNs (see Figure 1, 
 below). Traditional MTNN training faces challenges in managing conflicting loss gradients, often yielding sub-optimal 
@@ -50,7 +50,7 @@ running the "_.ate_fit_" method.
 
 ### Model Creation
 
-An ATEModel object is created exactly as any other hard-parameter sharing MTNN in keras, but the _ATEModel_ class must 
+An ATEModel object is created exactly as any other hard-parameter sharing MTNN in keras, but the _ATEModel_ clas must 
 be used and the trunk's layer names must be characterized by the same prefix. 
 
 All the model's layers having a name that 
@@ -67,7 +67,7 @@ There are no differences in compiling ATEModel objects.
 **ATTENTION (SGD OPTIMIZER):** for running an ATE-SG procedure, the ATEModel object _must be compiled using the keras SGD Optimizer_. 
 Using other optimizers the ATE procedure still works (using the chosen optimizer), 
 but convergence properties are not guaranteed. 
-The theoretical results about convergence in the paper are guaranteed only for the ATE-SG procedure (for now).
+The convergence theoretical results of the paper are guaranteed only for the ATE-SG procedure (for now).
 
 
 ### Training the Model with ATE Procedure
@@ -115,25 +115,37 @@ correct classification of the domain.
 ## Citation
 If you find the Alternate Tranining for MTNNs useful in your research, please cite:
 #### BibTeX
-> @misc{bellavia2023alternate,  
-> title={Alternate Training of Shared and Task-Specific Parameters for Multi-Task Neural Networks},   
-> author={Stefania Bellavia and Francesco {Della Santa} and Alessandra Papini},  
-> year={2023},  
-> eprint={2312.16340},  
-> archivePrefix={arXiv},  
-> primaryClass={cs.LG},  
-> url={ https://doi.org/10.48550/arXiv.2312.16340 }  
+> @article{Bellavia28042026,  
+> author = {Stefania Bellavia and Francesco Della Santa and Alessandra Papini},  
+> title = {ATE-SG: alternate through the epochs stochastic gradient for multi-task neural networks},  
+> journal = {Optimization Methods and Software},  
+> volume = {0},  
+> number = {0},  
+> pages = {1--33},  
+> year = {2026},  
+> publisher = {Taylor \& Francis},  
+> doi = {10.1080/10556788.2026.2659033},  
+> URL = {https://doi.org/10.1080/10556788.2026.2659033},  
+> eprint = {https://doi.org/10.1080/10556788.2026.2659033}  
 > }
 #### RIS
 > TY  - JOUR  
-> T1  - Alternate Training of Shared and Task-Specific Parameters for Multi-Task Neural Networks  
-> A1  - Bellavia, Stefania  
-> A1  - Della Santa, Francesco  
-> A1  - Papini, Alessandra  
-> JO  - arXiv preprint arXiv:2312.16340  
-> Y1  - 2023  
-> UR  - https://doi.org/10.48550/arXiv.2312.16340  
-> ER  - 
+> AU  - Bellavia, Stefania  
+> AU  - Della Santa, Francesco  
+> AU  - Papini, Alessandra  
+> TI  - ATE-SG: alternate through the epochs stochastic gradient for multi-task neural networks  
+> JO  - Optimization Methods and Software  
+> VL  - 0  
+> IS  - 0  
+> SP  - 1  
+> EP  - 33  
+> PY  - 2026  
+> DA  - 2026/04/28  
+> PB  - Taylor & Francis  
+> DO  - 10.1080/10556788.2026.2659033  
+> UR  - https://doi.org/10.1080/10556788.2026.2659033  
+> ER  -  
 
 ## Update
-- 2024.01.02: Repository creation.
+- 2026.05.01: Repository update after publication of the paper.
+- 2024.01.02: Repository creation (preprint 2023, avaible at https://doi.org/10.48550/arXiv.2312.16340).
