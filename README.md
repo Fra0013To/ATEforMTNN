@@ -13,11 +13,9 @@ In the article we introduce novel alternate training procedures for hard-paramet
 below). Traditional MTNN training faces challenges in managing conflicting loss gradients, often yielding sub-optimal 
 performance. The proposed alternate training method updates shared and task-specific weights alternately, exploiting 
 the multi-head architecture of the model. 
-This approach reduces computational costs, enhances training regularization, and improves generalization. 
-Convergence properties similar to those of the classical stochastic gradient method are established. 
-Empirical experiments demonstrate delayed overfitting, improved prediction, and reduced computational demands. 
-In summary, our alternate training procedures offer a promising advancement for the training of hard-parameter 
-sharing MTNNs.
+This approach reduces computational costs and enhances training regularization, maintaining the same performance of the corresponding "classic" methods. 
+Convergence properties similar to those of the classical stochastic gradient method are established.
+In summary, our alternate training procedures offer a promising advancement for the training of hard-parameter sharing MTNNs.
 
 ![Hard-parameter sharing MTNN](https://raw.githubusercontent.com/Fra0013To/ATEforMTNN/main/NNmultitaskGeneral_ex.png)
 
@@ -39,9 +37,7 @@ _ATEforMTNN_ is released under the MIT License (refer to
 the [LICENSE file](https://github.com/Fra0013To/ATEforMTNN/blob/main/LICENSE) for details).
 
 ## Requirements
-- numpy
-- tensorflow 2
-- matplotlib _(for running the example)_
+See the files [requirements_cpu.txt](https://github.com/Fra0013To/ATEforMTNN/blob/main/requirements_cpu.txt) or [requirements_gpu.txt](https://github.com/Fra0013To/ATEforMTNN/blob/main/requirements_gpu.txt)
 
 ## Getting Started
 The ATE-Stochastic Gradient (ATE-SG) training procedure can be used defining a model through the custom class 
@@ -92,12 +88,12 @@ To run the example (bash terminal):
     ```
 2. Install the [required python modules](https://github.com/Fra0013To/ATEforMTNN/blob/main/README.md#requirements).
     ```bash
-    pip install numpy
-    pip install matplotlib
-    pip install tensorflow==2.X.Y
+    pip install -r requirements_gpu.txt
     ```
-   
-    where _tensorflow==2.X.Y_ denotes a generic version of tensorflow 2.
+    or
+    ```bash
+    pip install -r requirements_gpu.txt
+    ```
     
 3. Run the script [example_alternate_training_epochs.py](https://github.com/Fra0013To/ATEforMTNN/blob/main/example_alternate_training_epochs.py)
 for the ATE-SG procedure example:
